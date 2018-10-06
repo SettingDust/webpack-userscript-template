@@ -1,0 +1,10 @@
+{
+  "name": "webpack-tampermonkey",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+  }
+}
