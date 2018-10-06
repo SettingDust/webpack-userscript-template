@@ -1,10 +1,26 @@
 {
   "name": "webpack-tampermonkey",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "test": "webpack --config webpack.dev.config.js"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "autoprefixer": "^9.1.5",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "jquery": "^3.3.1",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.3",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^0.23.0",
+    "to-string-loader": "^1.1.5",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
   }
 }
