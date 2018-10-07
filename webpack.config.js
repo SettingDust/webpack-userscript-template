@@ -21,10 +21,8 @@ module.exports = {
                 test: /\.css$/,
                 exclude: /(node_modules)/,
                 use: [
-                    'to-string-loader',
-                    'css-loader',
-                    'postcss-loader',
-                    'style-loader',
+                    {loader: 'css-loader'},
+                    {loader: 'postcss-loader'}
                 ],
             }, {
                 test: /\.(png|jpg|gif)$/,
