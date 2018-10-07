@@ -1,8 +1,11 @@
 ### Node
 node_modules/
 
+### Monkey
+test/
+
 ### IDEA
-.idea
+.idea/
 *.iml
 
 
