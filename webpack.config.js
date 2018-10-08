@@ -1,11 +1,11 @@
 const path = require('path');
 const monkey = require('./monkey.config');
 
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const Terser = require('terser-webpack-plugin');
 const BannerPlugin = require('webpack/lib/BannerPlugin');
 
 module.exports = {
-    entry: './src/monkey.js',
+    entry: monkey.config.entry,
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: monkey.header.name.toLowerCase().replace(" ", "-") + '.user.js'
@@ -31,8 +31,8 @@ module.exports = {
         ],
     },
     plugins: [
-        new UglifyJsPlugin({
-            uglifyOptions: {
+        new Terser({
+            terserOptions: {
                 mangle: false,
                 output: {
                     beautify: true,

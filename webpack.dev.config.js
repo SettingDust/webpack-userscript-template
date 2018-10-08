@@ -2,14 +2,14 @@ const path = require('path');
 const monkey = require('./monkey.dev.config');
 const fs = require("fs");
 
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const Terser = require('terser-webpack-plugin');
 
 if (!fs.existsSync("test"))
     fs.mkdirSync("test");
 fs.writeFileSync("./test/header.js", monkey.buildedHeader());
 
 module.exports = [{
-    entry: './src/monkey.js',
+    entry: monkey.config.entry,
     output: {
         path: path.resolve(__dirname, 'test'),
         filename: monkey.header.name.toLowerCase().replace(" ", "-") + '.js'
@@ -35,8 +35,8 @@ module.exports = [{
         ],
     },
     plugins: [
-        new UglifyJsPlugin({
-            uglifyOptions: {
+        new Terser({
+            terserOptions: {
                 mangle: false,
                 output: {
                     beautify: true,

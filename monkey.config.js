@@ -2,6 +2,10 @@ let name = "Good Monkey";
 let version = "0.0.1";
 let description = "This is a good monkey";
 
+const config = {
+    entry: "./src/monkey.js"
+};
+
 const header = {
     name: name,
     version: version,
@@ -17,6 +21,7 @@ const header = {
         "GM_addStyle", //GM_addStyle(require('file'))
     ]
 };
+module.exports.config = config;
 module.exports.header = header;
 module.exports.buildedHeader = () => {
     let headerString = [];

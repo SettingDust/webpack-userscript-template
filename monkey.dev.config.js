@@ -4,6 +4,7 @@ const header = monkey.header;
 //The test path.
 header.require.push(__dirname + "\\test\\" + monkey.header.name.toLowerCase().replace(" ", "-") + ".js");
 
+module.exports.config = monkey.config;
 module.exports.header = header;
 module.exports.buildedHeader = () => {
     let headerString = [];
