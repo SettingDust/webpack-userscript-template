@@ -48,13 +48,13 @@ module.exports = {
                         for (let p in monkey[headerKey]) {
                             headerString.push("// @" + headerKey.padEnd(13) + monkey[headerKey][p]);
                         }
-                        headerString.push("//  ");
+                        headerString.push("//");
                     } else {
                         headerString.push("// @" + headerKey.padEnd(13) + monkey[headerKey]);
                     }
                 }
-                headerString.push("// ==/UserScript==");
-                headerString.push("  ");
+                headerString[headerString.length - 1] = "// ==/UserScript==";
+                headerString.push("");
                 return headerString.join("\n");
             },
             raw: true
