@@ -11,16 +11,16 @@ module.exports.buildedHeader = () => {
     headerString.push("// ==UserScript==");
     for (let headerKey in header) {
         if (Array.isArray(header[headerKey])) {
+            if (header[headerKey].length > 0)
+                headerString.push("//");
             for (let p in header[headerKey]) {
                 headerString.push("// @" + headerKey.padEnd(13) + header[headerKey][p]);
             }
-            if (header[headerKey].length !== 0)
-                headerString.push("//");
         } else {
             headerString.push("// @" + headerKey.padEnd(13) + header[headerKey]);
         }
     }
-    headerString[headerString.length - 1] = "// ==/UserScript==";
+    headerString.push("// ==/UserScript==");
     headerString.push("");
     return headerString.join("\n");
 };
