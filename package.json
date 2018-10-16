@@ -7,7 +7,7 @@
     "test": "webpack --config webpack.dev.config.js"
   },
   "devDependencies": {
-    "autoprefixer": "^9.1.5",
+    "autoprefixer": "^9.2.0",
     "css-loader": "^1.0.0",
     "cssnano": "^4.1.4",
     "postcss-loader": "^3.0.0",
