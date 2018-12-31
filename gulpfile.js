@@ -16,7 +16,7 @@ gulp.task('format:js', () => {
         .pipe(gulp.dest((file) => file.base));
 });
 
-gulp.task('format', gulp.series(gulp.parallel('format:js')));
+gulp.task('format', gulp.series('format:js'));
 
 gulp.task('webpack', (callback) =>
     webpack(require('./webpack.config'), (err, stats) => {
@@ -50,4 +50,4 @@ gulp.task('webpack:dev', () =>
 
 gulp.task('build', gulp.series('webpack', 'format'));
 
-gulp.task('default', gulp.series('webpack:dev'));
+gulp.task('default', gulp.series(gulp.parallel('webpack:dev')));
