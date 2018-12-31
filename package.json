@@ -3,15 +3,17 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "test": "webpack --config webpack.dev.config.js",
-    "format": "prettier \"**/*.{js,json,md}\" --write"
+    "build": "gulp build --color",
+    "dev": "gulp --color",
+    "format": "gulp --color format"
   },
   "devDependencies": {
     "autoprefixer": "^9.4.3",
     "colors": "^1.3.3",
     "css-loader": "^1.0.1",
     "cssnano": "^4.1.8",
+    "gulp": "^4.0.0",
+    "gulp-prettier": "^2.0.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.15.3",
     "terser-webpack-plugin": "^1.2.1",
