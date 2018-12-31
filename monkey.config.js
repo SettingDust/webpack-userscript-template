@@ -3,7 +3,7 @@ let version = '0.0.1';
 let description = 'This is a good monkey';
 
 const config = {
-    entry: './src/monkey.js',
+    entry: './src/index.js'
 };
 
 const header = {
@@ -15,8 +15,8 @@ const header = {
     require: ['https://cdn.bootcss.com/jquery/3.3.1/jquery.js'],
     grant: [
         //https://tampermonkey.net/documentation.php#GM_addStyle
-        'GM_addStyle', //GM_addStyle(require('file'))
-    ],
+        'GM_addStyle' //GM_addStyle(require('file'))
+    ]
 };
 module.exports.config = config;
 module.exports.header = header;
