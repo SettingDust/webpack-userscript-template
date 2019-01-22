@@ -6,7 +6,7 @@ const colors = require('colors');
 
 const paths = {
     js: {
-        all: './javascript/**/*.js'
+        all: ['./javascript/**/*.js', './*.js']
     }
 };
 
@@ -19,7 +19,7 @@ gulp.task('format:js', () => {
 
 gulp.task('format', gulp.series('format:js'));
 
-gulp.task('webpack', callback =>
+gulp.task('webpack', (callback) =>
     webpack(require('./webpack.config'), (err, stats) => {
         callback();
         if (err) console.log(err);

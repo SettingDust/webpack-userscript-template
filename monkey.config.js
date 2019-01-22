@@ -27,10 +27,14 @@ module.exports.buildedHeader = () => {
         if (Array.isArray(header[headerKey])) {
             if (header[headerKey].length > 0) headerString.push('//');
             for (let p in header[headerKey]) {
-                headerString.push('// @' + headerKey.padEnd(13) + header[headerKey][p]);
+                headerString.push(
+                    '// @' + headerKey.padEnd(13) + header[headerKey][p]
+                );
             }
         } else {
-            headerString.push('// @' + headerKey.padEnd(13) + header[headerKey]);
+            headerString.push(
+                '// @' + headerKey.padEnd(13) + header[headerKey]
+            );
         }
     }
     headerString.push('// ==/UserScript==');

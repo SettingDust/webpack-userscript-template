@@ -9,9 +9,9 @@ if (!fs.existsSync('test')) fs.mkdirSync('test');
 fs.writeFileSync('./test/header.js', monkey.buildedHeader());
 
 console.log(
-    `[${colors.grey(
-        `${moment().format('HH:mm:ss')}`
-    )}][${colors.grey('Webpack')}] ${colors.green(
+    `[${colors.grey(`${moment().format('HH:mm:ss')}`)}][${colors.grey(
+        'Webpack'
+    )}] ${colors.green(
         'Copy the content of test/header.js to your TamperMonkey plugin'
     )}`
 );
