@@ -1,18 +1,19 @@
 const path = require('path');
 const monkey = require('./monkey.dev.config');
 const fs = require('fs');
+const moment = require('moment');
 
-const Terser = require('terser-webpack-plugin');
 const colors = require('colors');
 
 if (!fs.existsSync('test')) fs.mkdirSync('test');
 fs.writeFileSync('./test/header.js', monkey.buildedHeader());
 
 console.log(
-    `[` +
-    colors.grey('Webpack') +
-    `]` +
-    ' Copy the content of test/header.js to your TamperMonkey plugin'.green
+    `[${colors.grey(
+        `${moment().format('HH:mm:ss')}`
+    )}][${colors.grey('Webpack')}] ${colors.green(
+        'Copy the content of test/header.js to your TamperMonkey plugin'
+    )}`
 );
 
 module.exports = {
@@ -37,13 +38,8 @@ module.exports = {
         ]
     },
     plugins: [
-        // new Terser({
-        //     terserOptions: {
-        //         mangle: false,
-        //         output: {
-        //             beautify: true
-        //         }
-        //     }
-        // })
+        new webpack.optimize.LimitChunkCountPlugin({
+            maxChunks: 1
+        })
     ]
 };

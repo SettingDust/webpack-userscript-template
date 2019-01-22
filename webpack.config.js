@@ -25,6 +25,9 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.optimize.LimitChunkCountPlugin({
+            maxChunks: 1
+        }),
         new Terser({
             terserOptions: {
                 mangle: false,
