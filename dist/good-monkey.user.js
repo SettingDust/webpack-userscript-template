@@ -56,7 +56,7 @@
         return Object.prototype.hasOwnProperty.call(object, property);
     }, __webpack_require__.p = "", __webpack_require__(__webpack_require__.s = 0);
 }([ function(module, exports, __webpack_require__) {
-    $("body").css("background", "#212121"), GM_addStyle(__webpack_require__(1));
+    $("body").css("background", "#212121"), GM_addStyle(__webpack_require__(1).toString());
 }, function(module, exports, __webpack_require__) {
     (module.exports = __webpack_require__(2)(!1)).push([ module.i, "body{font-size:2rem;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex}div{background-color:#fff}", "" ]);
 }, function(module, exports, __webpack_require__) {
