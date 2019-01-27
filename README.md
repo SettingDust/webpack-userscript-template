@@ -1,20 +1,29 @@
+## Require
+- Node
+- npm
+- Git
+
 ## Usage
 
--   Clone it to your PC
--   Edit the `monkey.config.js` **NEED NOT TO EDIT THE `monkey.dev.config.js`**
--   Run `test` script in the `package.json`
--   Enjoy
+- `git clone https://github.com/SettingDust/webpack-tampermonkey.git`
+- `npm i`
+- `npm run test`
+- Copy the content of `./test/header.js` to the TamperMonkey script editor.
+- Open a webpage.
 
 ## Features
 
--   An awesome way to add style `GM_addStyle(require(filename))`
 -   Test without `Ctrl+V`
--   Build a public version easily
+-   Build a public version easily.
 
 ## Thanks
 
--   [webpack-tampermonkey](https://github.com/momocow/webpack-tampermonkey)
+- [webpack-tampermonkey](https://github.com/momocow/webpack-tampermonkey)
 
-**This is just a template. Please change the project name to your script's name**
+## Example
+- [biliplus-material](https://github.com/SettingDust/biliplus-material)
+- [RSSHelper](https://github.com/BangumiSystem/RSSHelper)
+
+**This is just a template. Please clone this project and edit the name**
 
 [Chinese Version](https://settingdust.github.io/2018/10/06/TamperMonkey+Webpack编译实现/)
