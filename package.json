@@ -17,7 +17,7 @@
     "moment": "^2.24.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.16.4",
-    "terser-webpack-plugin": "^1.2.3",
+    "terser-webpack-plugin": "^1.2.4",
     "to-string-loader": "^1.1.5",
     "url-loader": "^1.1.2",
     "webpack": "^4.29.6",
