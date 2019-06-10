@@ -16,7 +16,7 @@
     "gulp-prettier": "^2.1.0",
     "moment": "^2.24.0",
     "postcss-loader": "^3.0.0",
-    "prettier": "^1.16.4",
+    "prettier": "^1.18.2",
     "terser-webpack-plugin": "^1.2.3",
     "to-string-loader": "^1.1.5",
     "url-loader": "^1.1.2",
