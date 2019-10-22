@@ -13,7 +13,7 @@
     "css-loader": "^3.0.0",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
-    "gulp-prettier": "^2.1.0",
+    "gulp-prettier": "^2.2.0",
     "moment": "^2.24.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.18.2",
