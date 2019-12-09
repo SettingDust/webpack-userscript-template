@@ -37,6 +37,7 @@ module.exports.buildedHeader = () => {
             );
         }
     }
+    headerString.push('// Build with https://github.com/SettingDust/webpack-tampermonkey');
     headerString.push('// ==/UserScript==');
     headerString.push('');
     return headerString.join('\n');
