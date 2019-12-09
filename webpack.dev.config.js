@@ -1,6 +1,7 @@
 const path = require('path');
 const monkey = require('./monkey.dev.config');
 const fs = require('fs');
+const webpack = require('webpack');
 const moment = require('moment');
 
 const colors = require('colors');
