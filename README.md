@@ -7,7 +7,7 @@
 
 - `git clone https://github.com/SettingDust/webpack-tampermonkey.git`
 - `npm i`
-- `npm run test`
+- `npm run dev`
 - Copy the content of `./test/header.js` to the TamperMonkey script editor.
 - Open a webpage.
 
