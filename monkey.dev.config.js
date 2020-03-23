@@ -13,7 +13,7 @@ header.require.push(
 module.exports.config = monkey.config;
 module.exports.header = header;
 module.exports.buildedHeader = () => {
-    let headerString = [];
+    const headerString = [];
     headerString.push('// ==UserScript==');
     for (let headerKey in header) {
         if (Array.isArray(header[headerKey])) {
