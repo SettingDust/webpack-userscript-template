@@ -8,7 +8,7 @@
     "format": "gulp --color format"
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.5",
+    "autoprefixer": "^9.7.6",
     "colors": "^1.4.0",
     "css-loader": "^3.4.2",
     "cssnano": "^4.1.10",
