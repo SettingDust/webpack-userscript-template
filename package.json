@@ -1,0 +1,33 @@
+{
+  "name": "webpack-tampermonkey",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SettingDust/webpack-tampermonkey.git"
+  },
+  "keywords": [
+    "webpack",
+    "tampermonkey"
+  ],
+  "author": "SettingDust",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SettingDust/webpack-tampermonkey/issues"
+  },
+  "homepage": "https://github.com/SettingDust/webpack-tampermonkey#readme",
+  "devDependencies": {
+    "@types/node": "^14.0.13",
+    "@types/webpack": "^4.41.17",
+    "@types/webpack-dev-server": "^3.11.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
