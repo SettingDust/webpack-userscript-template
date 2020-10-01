@@ -1,9 +1,9 @@
-const path = require('path');
-const monkey = require('./monkey.config');
-const webpack = require('webpack');
+const path = require('path')
+const monkey = require('./monkey.config')
+const webpack = require('webpack')
 
-const Terser = require('terser-webpack-plugin');
-const BannerPlugin = require('webpack/lib/BannerPlugin');
+const Terser = require('terser-webpack-plugin')
+const BannerPlugin = require('webpack/lib/BannerPlugin')
 
 module.exports = {
     entry: monkey.config.entry,
@@ -43,4 +43,4 @@ module.exports = {
             raw: true
         })
     ]
-};
+}

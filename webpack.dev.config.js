@@ -1,13 +1,13 @@
-const path = require('path');
-const monkey = require('./monkey.dev.config');
-const fs = require('fs');
-const moment = require('moment');
+const path = require('path')
+const monkey = require('./monkey.dev.config')
+const fs = require('fs')
+const moment = require('moment')
 
-const colors = require('colors');
-const webpack = require('webpack');
+const colors = require('colors')
+const webpack = require('webpack')
 
-if (!fs.existsSync('test')) fs.mkdirSync('test');
-fs.writeFileSync('./test/header.js', monkey.buildedHeader());
+if (!fs.existsSync('test')) fs.mkdirSync('test')
+fs.writeFileSync('./test/header.js', monkey.buildedHeader())
 
 console.log(
     `[${colors.grey(`${moment().format('HH:mm:ss')}`)}][${colors.grey(
@@ -15,7 +15,7 @@ console.log(
     )}] ${colors.green(
         'Copy the content of test/header.js to your TamperMonkey plugin'
     )}`
-);
+)
 
 module.exports = {
     entry: monkey.config.entry,
@@ -43,4 +43,4 @@ module.exports = {
             maxChunks: 1
         })
     ]
-};
+}
