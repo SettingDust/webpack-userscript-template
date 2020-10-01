@@ -9,7 +9,7 @@ module.exports.header = header;
 module.exports.buildedHeader = () => {
     const headerString = [];
     headerString.push('// ==UserScript==');
-    for (let headerKey in header) {
+    for (const headerKey in header) {
         if (Array.isArray(header[headerKey])) {
             if (header[headerKey].length > 0) headerString.push('//');
             for (let p in header[headerKey]) {

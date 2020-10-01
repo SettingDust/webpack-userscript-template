@@ -19,9 +19,8 @@ gulp.task('format:js', () => {
 
 gulp.task('format', gulp.series('format:js'));
 
-gulp.task('webpack', (callback) =>
+gulp.task('webpack', () =>
     webpack(require('./webpack.config'), (err, stats) => {
-        callback();
         if (err) console.log(err);
         console.log(
             `[${colors.grey(`${moment().format('HH:mm:ss')}`)}][${colors.grey(

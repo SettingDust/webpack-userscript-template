@@ -10,7 +10,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename:
-            monkey.header.name.toLowerCase().replace(' ', '-') + '.user.js'
+            monkey.header.name.toLowerCase().split(' ').join('-') + '.user.js'
     },
     mode: 'none',
     module: {

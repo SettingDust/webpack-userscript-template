@@ -4,6 +4,7 @@ const fs = require('fs');
 const moment = require('moment');
 
 const colors = require('colors');
+const webpack = require('webpack');
 
 if (!fs.existsSync('test')) fs.mkdirSync('test');
 fs.writeFileSync('./test/header.js', monkey.buildedHeader());

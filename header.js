@@ -10,4 +10,4 @@ class MetadataBlock {
     }
 }
 
-module.exports = new MetadataBlock;
+module.exports = new MetadataBlock();
