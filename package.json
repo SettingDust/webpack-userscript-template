@@ -2,9 +2,11 @@
   "name": "webpack-tampermonkey",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/good-monkey.user.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "dev": "webpack -c webpack.dev.config.ts",
+    "format": "prettier --write **/*.ts"
   },
   "repository": {
     "type": "git",
@@ -19,20 +21,27 @@
   "bugs": {
     "url": "https://github.com/SettingDust/webpack-tampermonkey/issues"
   },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "printWidth": 150
-  },
   "homepage": "https://github.com/SettingDust/webpack-tampermonkey#readme",
   "devDependencies": {
-    "@types/node": "^14.0.13",
-    "@types/webpack": "^4.41.17",
-    "@types/webpack-dev-server": "^3.11.0",
-    "ts-node": "^8.10.2",
-    "typescript": "^3.9.5",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/node": "^15.12.1",
+    "@types/webpack-dev-server": "^3.11.4",
+    "autoprefixer": "^10.2.6",
+    "chalk": "^4.1.1",
+    "css-loader": "^5.2.6",
+    "cssnano": "^5.0.5",
+    "postcss": "^8.3.0",
+    "postcss-loader": "^5.3.0",
+    "prettier": "^2.3.0",
+    "sass": "^1.34.1",
+    "sass-loader": "^12.0.0",
+    "to-string-loader": "github:gajus/to-string-loader",
+    "ts-loader": "^9.2.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
