@@ -19,7 +19,7 @@ gulp.task('format:js', () => {
 
 gulp.task('format', gulp.series('format:js'));
 
-gulp.task('webpack', () =>
+gulp.task('webpack', async () =>
     webpack(require('./webpack.config'), (err, stats) => {
         if (err) console.log(err);
         console.log(
@@ -31,7 +31,7 @@ gulp.task('webpack', () =>
         );
     })
 );
-gulp.task('webpack:dev', () =>
+gulp.task('webpack:dev', async () =>
     webpack(require('./webpack.dev.config'), (err, stats) => {
         if (err) console.log(err);
         console.log(

@@ -9,6 +9,7 @@
 // @require      https://cdn.bootcss.com/jquery/3.3.1/jquery.js
 //
 // @grant        GM_addStyle
+// @grant        GM_setValue
 // ==/UserScript==
 
 !function(modules) {
@@ -57,39 +58,6 @@
     }, __webpack_require__.p = "", __webpack_require__(__webpack_require__.s = 0);
 }([ function(module, exports, __webpack_require__) {
     $("body").css("background", "#212121"), GM_addStyle(__webpack_require__(1).toString());
-}, function(module, exports, __webpack_require__) {
-    (module.exports = __webpack_require__(2)(!1)).push([ module.i, "body{font-size:2rem;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex}div{background-color:#fff}", "" ]);
-}, function(module, exports, __webpack_require__) {
-    "use strict";
-    module.exports = function(useSourceMap) {
-        var list = [];
-        return list.toString = function() {
-            return this.map(function(item) {
-                var content = function(item, useSourceMap) {
-                    var content = item[1] || "", cssMapping = item[3];
-                    if (!cssMapping) return content;
-                    if (useSourceMap && "function" == typeof btoa) {
-                        var sourceMapping = (sourceMap = cssMapping, "/*# sourceMappingURL=data:application/json;charset=utf-8;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */"), sourceURLs = cssMapping.sources.map(function(source) {
-                            return "/*# sourceURL=" + cssMapping.sourceRoot + source + " */";
-                        });
-                        return [ content ].concat(sourceURLs).concat([ sourceMapping ]).join("\n");
-                    }
-                    var sourceMap;
-                    return [ content ].join("\n");
-                }(item, useSourceMap);
-                return item[2] ? "@media " + item[2] + "{" + content + "}" : content;
-            }).join("");
-        }, list.i = function(modules, mediaQuery) {
-            "string" == typeof modules && (modules = [ [ null, modules, "" ] ]);
-            for (var alreadyImportedModules = {}, i = 0; i < this.length; i++) {
-                var id = this[i][0];
-                null != id && (alreadyImportedModules[id] = !0);
-            }
-            for (i = 0; i < modules.length; i++) {
-                var item = modules[i];
-                null != item[0] && alreadyImportedModules[item[0]] || (mediaQuery && !item[2] ? item[2] = mediaQuery : mediaQuery && (item[2] = "(" + item[2] + ") and (" + mediaQuery + ")"), 
-                list.push(item));
-            }
-        }, list;
-    };
+}, function(module, exports) {
+    throw new Error("Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):\nError: true is not a PostCSS plugin\n    at Processor.normalize (E:\\TamperMonkey\\webpack-tampermonkey\\node_modules\\postcss\\lib\\processor.js:168:15)\n    at new Processor (E:\\TamperMonkey\\webpack-tampermonkey\\node_modules\\postcss\\lib\\processor.js:52:25)\n    at postcss (E:\\TamperMonkey\\webpack-tampermonkey\\node_modules\\postcss\\lib\\postcss.js:55:10)\n    at Object.loader (E:\\TamperMonkey\\webpack-tampermonkey\\node_modules\\postcss-loader\\dist\\index.js:94:41)");
 } ]);
