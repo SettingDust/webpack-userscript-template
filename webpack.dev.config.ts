@@ -17,7 +17,7 @@ export default {
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: metadata.name.toLowerCase().replace(' ', '-') + '.js'
+    filename: metadata.name.toLowerCase().replace(' ', '-') + '.user.js'
   },
   mode: 'development',
   devtool: 'inline-source-map',
@@ -25,14 +25,7 @@ export default {
     rules: [
       {
         test: /\.tsx?$/,
-        use: {
-          loader: 'ts-loader',
-          options: {
-            compilerOptions: {
-              sourceMap: true
-            }
-          }
-        }
+        use: 'ts-loader'
       },
       {
         test: /\.s[ac]ss$/i,

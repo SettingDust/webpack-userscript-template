@@ -1,7 +1,6 @@
 import metadata from '../monkey.config'
 
-const paddingLength =
-  1 + Object.keys(metadata).reduce((prev, curr) => (curr.length > prev ? curr.length : prev), 0)
+const paddingLength = 1 + Object.keys(metadata).reduce((prev, curr) => (curr.length > prev ? curr.length : prev), 0)
 
 const prefix = (arr: string[]): string[] => {
   const newArr = arr.map((it) => `// ${it}`)
@@ -19,9 +18,8 @@ const sign = (arr: string[]): string[] => {
 export default (dev: boolean = false): string => {
   const metas: string[] = []
   if (dev) {
-    if (!metadata.require)
-      metadata.require = []
-    metadata.require.push('file://' + __dirname + '\\build\\' + metadata.name.toLowerCase().replace(' ', '-') + '.js')
+    if (!metadata.require) metadata.require = []
+    metadata.require.push('file://' + __dirname + '\\build\\' + metadata.name.toLowerCase().replace(' ', '-') + '.user.js')
   }
   for (const [key, value] of Object.entries(metadata)) {
     if (Array.isArray(value) && value.length) {

@@ -5,6 +5,7 @@ import banner from './scripts/banner'
 import metadata from './monkey.config'
 import LimitChunkCountPlugin = webpack.optimize.LimitChunkCountPlugin
 import BannerPlugin = webpack.BannerPlugin
+import TerserPlugin from 'terser-webpack-plugin'
 
 // noinspection JSUnusedGlobalSymbols
 export default {
@@ -12,7 +13,21 @@ export default {
   output: {
     filename: metadata.name.toLowerCase().replace(' ', '-') + '.user.js'
   },
-  mode: 'production',
+  mode: 'none',
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          mangle: false,
+          format: {
+            comments: (node, comment) => comment.type === 'comment1'
+              && /(^\s==\/?UserScript==)|(^\s@.+\s+.+$)|(^\s$)/.test(comment.value)
+          }
+        }
+      })
+    ]
+  },
   module: {
     rules: [
       {
@@ -27,18 +42,6 @@ export default {
         test: /\.(png|jpg|gif)$/,
         type: 'asset/inline'
       }
-    ]
-  },
-  optimization: {
-    minimizer: [
-      () => ({
-        terserOptions: {
-          mangle: false,
-          output: {
-            beautify: true
-          }
-        }
-      })
     ]
   },
   plugins: [
